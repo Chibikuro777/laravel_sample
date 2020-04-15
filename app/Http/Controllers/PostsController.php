@@ -37,7 +37,6 @@ class PostsController extends Controller
 
         return view('posts.show', [
             'post' => $post,
-            // '' => ,
         ]);
     }
 
@@ -46,6 +45,16 @@ class PostsController extends Controller
         $post = Post::findOrFail($post_id);
 
         return view('posts.edit',[
+            'post' => $post,
+        ]);
+    }
+
+    public function comment($post_id)
+    {
+        $post = Post::findOrFail($post_id);
+
+        return view('posts.comment',
+        [
             'post' => $post,
         ]);
     }

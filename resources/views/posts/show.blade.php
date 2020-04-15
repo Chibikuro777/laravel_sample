@@ -66,7 +66,7 @@
                         <p class="mt-2">
                             {!! nl2br(e($comment->body)) !!}
                             <div class="mb-4 text-right">
-                                <a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post]) }}">
+                                <a class="btn btn-primary" href="{{ route('posts.comment', ['post' => $post]) }}">
                                     編集する
                                 </a>
                             </div>
